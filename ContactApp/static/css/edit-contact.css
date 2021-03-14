@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background: #161623;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(50px);
+}
+
+.container{
+    width: 480px;
+    min-height: 60vh;
+    background-color: rgba(255, 255, 255,0.1);
+    border-radius: 20px;
+    display: flex;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5) ;
+    border-top: 1px solid rgba(255, 255, 255,0.5);
+    border-left: 1px solid rgba(255, 255, 255,0.5);
+    position: relative;
+}
+
+.wrapper{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid black; */
+    position: relative;
+}
+
+.header{
+    display: flex;
+    /* border: 1px solid white; */
+    justify-content: center;
+}
+
+.card{
+    display:flex;
+    flex-direction: column;
+    margin: 1em 0;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height:150px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5) ;
+    border-top: .5px solid rgba(255, 255, 255,0.5);
+    border-left: .5px solid rgba(255, 255, 255,0.5);    
+}
+
+.user{
+    font-size: 60px;
+    color:rgba(255, 255, 255,0.7);
+}
+
+.card h3{
+    padding-top:.5em;
+    color:rgba(255, 255, 255,0.7)
+}
+
+.back{
+    /* border: 1px solid white; */
+    font-size: 22px;
+    height: fit-content;
+    position: absolute;
+    top:5%;
+    left: 5%;
+    color:rgba(255, 255, 255,0.7)
+}
+
+.detail-lists{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid white; */
+}
+
+.detail-list{
+    margin:1em;
+    display: flex;
+    align-items: center;
+    /* border: 1px solid white; */
+}
+
+.leading-icon{
+    font-size: 30px;
+    left: 12%;
+    position: absolute;
+    /* border: 1px solid white; */
+    color:rgba(255, 255, 255,0.7);
+    transition: 0.3s;
+}
+
+.leading-icon:hover{
+    color:rgba(255, 255, 255,1);
+    transform: scale(1.2);
+}
+
+::placeholder{
+    padding-left: 2em;
+    color: rgba(255, 255, 255,0.7);
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.input-box{
+    margin-left: 2.5em;
+    width: 20em;
+    height: 40px;
+    background-color: rgba(255, 255, 255,0.2);
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5) ;
+    border-top: .5px solid rgba(255, 255, 255,0.5);
+    border-left: .5px solid rgba(255, 255, 255,0.5);  
+    border-right:none;
+    border-bottom: none;
+    outline:none;
+    border-radius: 10px;
+    color: white;
+    font-family: "Poppins";
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    padding-left: 2em;
+}
+
+.footer{
+    display: flex;
+
+}
+
+.save{
+    display: flex;
+    align-items: center;
+    margin-top: 1em;
+    margin-left: 4.5em;
+    justify-content: center;
+    height: 3em;
+    background: rgba(255, 255, 255,0.2);
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.5) ;
+    border-top: .5px solid rgba(255, 255, 255,0.5);
+    border-left: .5px solid rgba(255, 255, 255,0.5);  
+    border-radius: 10px;
+    width: 13em;
+    transition: 0.5s;
+    outline: none;
+}
+
+.save i{
+    padding-right: .5em;
+    font-size: 25px;
+    color:rgba(255, 255, 255,0.7)
+}
+
+.save h3{
+    color: rgba(255, 255, 255,0.7);
+}
+
+.save:hover{
+    transform: scale(1.1);
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.5) ;
+}
+
+.gradient-ball{
+    width: 180px;
+    height:180px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+}
+
+.one{
+    width: 180px;
+    height:180px;  
+    background:linear-gradient(to left,#f00, #a7abb426) ;
+    top: -10%;
+    left: 80%;   
+}
+
+.two{
+    width: 200px;
+    height:200px;  
+    background:linear-gradient(to bottom,#51e4441a,rgba(51, 224, 255, 0.533)) ;
+    top: 85%;
+    left: -10%;       
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-track{
+    border:4px solid rgba(255, 255, 255,0.2);
+}
+
+::-webkit-scrollbar-thumb{
+    background:#161623bb;
+    border-radius:3px;
+}

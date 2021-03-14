@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <title>Contact App</title>
+</head>
+<body>
+        <div class="container">
+          <!-- Wrapper  -->
+          <div class="wrapper">
+            <h4>Login Page</h4>
+            <form method="POST" id='login'>
+                {% csrf_token %}
+                <label class="username">Username</label>
+                {{ form.username }}
+                <br>
+                <label class="password">Password</label>
+                {{ form.password }}
+                <input type='submit'  class="authenticated" value="Login">
+            </form>
+            <div class='footer'>
+                <p>Dont have an account ?</p> <a href="{% url 'register' %}"><h3 class='register'>Register</h3></a>
+            </div>
+        <div class="gradient-ball one"></div>
+        <div class="gradient-ball two"></div>
+
+</body>
+</html>

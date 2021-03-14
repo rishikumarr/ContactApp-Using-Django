@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background: #161623;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(50px);
+}
+
+.container{
+    width: 480px;
+    min-height: 60vh;
+    background-color: rgba(255, 255, 255,0.1);
+    border-radius: 20px;
+    display: flex;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.5) ;
+    border-top: 1px solid rgba(255, 255, 255,0.5);
+    border-left: 1px solid rgba(255, 255, 255,0.5);
+    position: relative;
+}
+
+.display{
+    display: flex;
+    flex-direction: column;
+    margin:0 auto;
+}
+
+.header-1{
+    display: flex;
+    align-items: center;
+    margin: 1em ;
+}
+
+.header-1 h3{
+    font-size: 1.3em;
+    padding-left: .74em;
+    color:rgba(255, 255, 255,0.7);
+}
+
+.settings{
+    color:rgba(255, 255, 255,0.7);
+    font-size: 25px;
+    width: fit-content;
+    margin-left: 12em;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    margin-left:2em;
+    margin-right:2em;
+    margin-bottom: 2em; 
+
+}
+
+.header-2{
+    position: relative;
+}
+
+::placeholder{
+    font-size: 1em;
+    font-weight: bold;
+    padding-left: 1em;
+    color:rgba(255, 255, 255,0.5);
+}
+
+.plus{
+    padding-left: 1em;
+    color:rgba(255, 255, 255,0.7);
+}
+
+.search-box{
+    border-radius: 10px;
+    outline: 0 none;
+    background-color:rgba(255, 255, 255,0.3);
+    width: 18em;
+    height: 2em;
+    border-top: 0.5px solid rgba(255, 255, 255,0.5);
+    border-left: 0.5px solid rgba(255, 255, 255,0.5);
+    border-bottom: none;
+    border-right: none;
+    font-family: "Poppins";
+    letter-spacing: 1.5px;
+    padding-left:1em;
+    font-weight: bold;
+    color: white;
+}
+
+.inside-input{
+    position: absolute;
+    right: 40%;
+    margin-top: .3em;
+    color:rgba(255, 255, 255,0.5);
+}
+
+.user{
+    font-size:45px;
+    margin: .5em .5em;
+    color:rgba(255, 255, 255,0.7);
+}
+
+.contact-lists{
+    margin: 1em 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 .2em;
+    max-height: 540px;
+    overflow-y: auto;
+}
+
+.contact-list{
+    display: flex;
+    margin: .2rem 0;
+    padding: .5em .5rem;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255,0.2);
+    border-top: 0.5px solid rgba(255, 255, 255,0.5);
+    border-left: 0.5px solid rgba(255, 255, 255,0.5);
+    transition: 0.3s;
+}
+
+.contact-list:hover{
+    background-color: rgba(255, 255, 255,0.4);  
+}
+
+h4,h5{
+    color:rgba(255, 255, 255,0.7);
+    transition: 0.3s;
+}
+
+.content h4:hover{
+    color:rgba(255, 255, 255,1);
+    transform: scale(1.1);
+}
+
+.content h5:hover{
+    color: rgba(255, 255, 255,1);
+    transform: scale(1.1);
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 .5em;
+}
+
+.content h4{
+    padding-bottom: .5em;   
+} 
+
+.footer{
+    position: absolute;
+    top:93%;
+    left:90%;
+}
+
+.add-contact{
+    font-size: 20px;
+    color:rgba(255, 255, 255,0.7);
+    border-radius: 50%;
+}
+
+.gradient-ball{
+    width: 180px;
+    height:180px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+}
+
+.one{
+    width: 180px;
+    height:180px;  
+    background:linear-gradient(to right,#fd384c, #a7abb426) ;
+    top: 40%;
+    left: -30%;   
+}
+
+.two{
+    width: 200px;
+    height:200px;  
+    background:linear-gradient(to right,#f33c4e10,#fd38) ;
+    top: 5%;
+    right: -30%;       
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+}
+
+::-webkit-scrollbar-track{
+    border:4px solid rgba(255, 255, 255,0.2);
+}
+
+::-webkit-scrollbar-thumb{
+    background:#161623bb;
+    border-radius:3px;
+}

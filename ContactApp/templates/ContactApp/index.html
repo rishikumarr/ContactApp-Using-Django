@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <title>Contact App</title>
+</head>
+<body>
+        <div class="container">
+            <!-- Header -->
+            <div class="display">
+                <!-- Header - 1 -->
+                <div class="header-1">
+                    <h3>Contacts</h3>
+                    <!-- <h3>Welcome {{ request.user | title}}</h3> -->
+                    <a href="{% url 'settings' %}" title='settings' class='settings-icon settings'><i class="fas fa-cog"></i></a>
+                </div>
+
+                <div class="wrapper">
+
+                    <!-- Header - 2  -->
+                    <div class="header-2">
+                        <form action="" method="GET" class='form' id='search-form' autocomplete="off">
+                            {% csrf_token %}
+                            <input type="text" placeholder="Search people" name='search-area' class='search-box' value={{ search_input }}>
+                            <a href="#" onclick="document.getElementById('search-form').submit();" title='search contact'><i class="fas fa-search inside-input"></i></a>
+                            <a href="{% url 'add-contact' %}" title="add new contact"><i class="fas fa-plus plus"></i></a>                    
+                        </form>
+                    </div>
+
+                    <!-- Contact Lists Section -->
+                    <div class="contact-lists">
+                        <!-- Contact List -->
+                        {% for contact in contacts reversed %}
+                            <div class="contact-list">
+                                <a href="{% url 'view-contact' contact.id %}">
+                                    <div class="avatar">
+                                        <i class="fas fa-user-circle user"></i>
+                                    </div>
+                                    <div class="content">
+                                            <h4>{{ contact.full_name | title }}</h4>
+                                            <h5>{{ contact.phone }}</h5>
+                                        </div>
+                                    </a>
+                                </div>
+                            {% empty %}
+                            <h3 style="margin-top: 2em; justify-content: center; color: rgba(255,255,255,0.7);">No contacts to show..</h3>
+                            {% endfor %}
+
+                    <!-- Footer Section -->
+                    <div class="footer">
+                        <a href="{% url 'add-contact' %}" title="add new contact">
+                            <i class="fas fa-user-plus add-contact"></i>
+                        </a>
+                    </div>
+                    </div>
+                </div>
+                <div class="gradient-ball one"></div>
+                <div class="gradient-ball two"></div>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static 'css/add-contact.css' %}">
+    <title>Contact App</title>
+</head>
+<body>
+        <div class="container">
+        <!-- Wrapper  -->
+        <div class="wrapper">
+
+            <div class="header">
+                <a href="{% url 'index' %}" title='back to home page'><i class="fas fa-chevron-left back"></i></a>
+                <!-- User Card -->
+                <div class="card">
+                    <i class="fas fa-user-circle user"></i>
+                    <h3>Add Contact Details</h3>                                
+                </div>
+            </div>
+
+            <!-- Details lists-->
+            <div class="detail-lists">
+                <form action="" method="POST" id='addcontact' autocomplete="off">
+                    {% csrf_token %}
+                    <!-- Detail list -->
+                    <div class="detail-list">
+                        <div class="leading-icon"><i class="fas fa-user-circle"></i></div>
+
+                            <input type="text" class='input-box' placeholder="Full Name" name="full_name">
+
+                    </div>
+
+                    <!-- Detail list -->
+                    <div class="detail-list">
+                        <div class="leading-icon"><i class="fas fa-phone-alt"></i></div>
+                            <input type="text" class='input-box' placeholder="Phone number" name="phone">
+                    </div>
+
+                    <!-- Detail list -->
+                    <div class="detail-list">
+                        <div class="leading-icon"><i class="fas fa-envelope"></i></div>
+                            <input type="text" class='input-box' placeholder="Email" name="email">
+                    </div>
+
+                    <!-- Detail list -->
+                    <div class="detail-list">
+                        <div class="leading-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <input type='text-area' class='input-box' placeholder="Address" name="address">
+                    </div>
+                    <!-- Save Button -->
+                    <button type="submit" onclick="document.getElementById('addcontact').submit();" class='save' >
+                        <i class="fas fa-save" ></i>
+                        <h3>Save Contact</h3>  
+                    </button>                
+                </form>
+
+                    <!-- <i onclick="document.getElementById('search-form').submit();" style="padding-left: 5px;"
+					class="fas fa-search"></i> -->
+
+                    <div class="gradient-ball one"></div>
+                    <div class="gradient-ball two"></div>
+            </div>
+        </div>
+        <script type="text/javascript" src="{% static 'js/vanilla-tilt.js' %}"></script>
+        <script>
+            VanillaTilt.init(document.querySelector(".card"), {
+            max: 25,
+            speed: 200,
+            glare:true,
+            'max-glare': 1,
+        });
+        </script>
+</body>
+</html>
